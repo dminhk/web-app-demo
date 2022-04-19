@@ -1,5 +1,6 @@
 # Simple web app demo
 
+* Ubuntu 20.04
 ```
   user_data = <<-EOF
     #!/bin/bash
