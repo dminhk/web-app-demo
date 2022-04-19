@@ -1,1 +1,1 @@
-# web-app-demo
+# Simple web app demo
