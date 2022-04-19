@@ -1,13 +1,14 @@
 # Simple web app demo
 
-* Ubuntu 20.04
+* Amazon Linux 2 AMI 
 ```
   user_data = <<-EOF
     #!/bin/bash
-    sudo apt update
-    sudo apt update
-    sudo git clone https://github.com/dminhk/web-app-demo.git
-    sudo apt install apache2 -y
-    sudo cp /home/ubuntu/web-app-demo/* /var/www/html/
+    sudo yum install httpd -y
+    sudo yum install git -y
+    sudo rm -rf /var/www/html/*
+    git clone https://github.com/dminhk/web-app-demo.git /var/www/html/
+    sudo systemctl start httpd
+    sudo systemctl enable httpd
     EOF
 ```
